@@ -4,7 +4,7 @@ import PageTitle from './PageTitle';
 const Header = () => {
   return (
     <header>
-      <h1>seasons</h1>
+      <h6 id="header-site-title">seasons</h6>
       <PageTitle />
     </header>
   )
