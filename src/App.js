@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from "./Header/Header";
+import Header from "./Header";
 import ClockAnalog from './ClockAnalog';
 import ToDoList from './ToDoList';
 
 class App extends Component {
-  // figure out how to integrate with BE (Node.js)
+  // LATER - figure out how to integrate with BE (Node.js)
   // LATER - state: users 
   // LATER - state: keep track of widgets user wants in their productivity center
 
