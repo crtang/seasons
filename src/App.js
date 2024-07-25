@@ -1,7 +1,9 @@
+import React, { Component } from 'react';
 import './App.css';
 import Header from "./Header";
+import ClockAnalog from './ClockAnalog';
 
-function App() {
+class App extends Component {
   // figure out how to integrate with BE (Node.js)
   // LATER - state: users 
   // LATER - state: keep track of widgets user wants in their productivity center
@@ -12,11 +14,14 @@ function App() {
 
   // LATER - function: delete widget
 
-  return (
-    <div className="App">
-      <Header />
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <Header />
+        <ClockAnalog />
+      </div>
+    )
+  };
 }
 
 export default App;
