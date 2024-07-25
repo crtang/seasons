@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from "./Header";
 import ClockAnalog from './ClockAnalog';
+import ToDoList from './ToDoList';
 
 class App extends Component {
   // figure out how to integrate with BE (Node.js)
@@ -18,7 +19,6 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <ClockAnalog />
       </div>
     )
   };
