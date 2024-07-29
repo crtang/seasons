@@ -1,8 +1,20 @@
 import React from 'react';
+import ListItem from './ListItem';
 
-const List = () => {
+const List = (props) => {
+  const renderList = (task) => {
+    <ListItem 
+      task={task}
+      key={task.id}
+    />
+  };
+
+  const listElements = props.taskList.map(renderList);
+
   return (
-    <div></div>
+    <ul>
+      { listElements }
+    </ul>
   );
 }
 
