@@ -2,7 +2,9 @@ import React from 'react';
 
 const ListHeader = (props) => {
   return (
-    <div></div>
+    <div>
+      <h2 id="to-do_list_title">to do list</h2>
+    </div>
   );
 };
 
