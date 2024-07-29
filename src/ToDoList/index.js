@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import List from './List';
 
 class ToDoList extends Component {
   constructor(props) {
@@ -8,6 +9,9 @@ class ToDoList extends Component {
     this.state = {
       taskList: [ { } ],
     };
+
+    this.editTask = this.editTask.bind(this);
+    this.deleteTask = this.deleteTask.bind(this);
   };
 
   addTask = () => {
@@ -53,7 +57,9 @@ class ToDoList extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        <List taskList={this.state.taskList} editTask={this.editTask} deleteTask={this.deleteTask} />
+      </div>
     )
   }
 };
