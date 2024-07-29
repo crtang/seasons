@@ -15,8 +15,8 @@ const ListItem = (props) => {
     <li>
       <label class="task">
         <input class="is-task-done" type="checkbox" />
-        <span class="checkmark">{ props.task.item }</span>
-        <span class="task-content"></span>
+        <span class="checkmark"></span>
+        <span class="task-content">{ props.task.item }</span>
         <span class="edit-task" onClick={editThis}></span>
         <span class="delete-task" onClick={deleteThis}></span>
       </label>
