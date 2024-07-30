@@ -6,6 +6,7 @@ const List = (props) => {
     <ListItem 
       task={task}
       key={task.id}
+      editTask={props.editTask}
       deleteTask={props.deleteTask}
     />
   ;
