@@ -19,6 +19,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <ToDoList />
       </div>
     )
   };

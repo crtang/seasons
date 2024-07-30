@@ -37,7 +37,7 @@ class ToDoList extends Component {
     });
 
     this.setState({ taskList: updatedTasks });
-  }
+  };
 
   deleteTask = () => {
     // find id of element
