@@ -14,7 +14,7 @@ function NewTask (props) {
   };
 
   return (
-    <form onSubmit={addNewTask}>
+    <form id="taskbar" onSubmit={addNewTask}>
       <input
         id="enter-task" 
         type="text" 
@@ -22,7 +22,7 @@ function NewTask (props) {
         value={taskName}
         onChange={changeTask} 
       />
-      <button type="submit">
+      <button id="add-task" type="submit">
         add
       </button>
     </form>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './index.css';
 import ListHeader from './ListHeader';
 import List from './List';
 
@@ -58,10 +57,10 @@ class ToDoList extends Component {
 
   render() {
     return (
-      <div>
+      <article id="to-do_list">
         <ListHeader addTask={this.addTask} />
         <List taskList={this.state.taskList} editTask={this.editTask} deleteTask={this.deleteTask} />
-      </div>
+      </article>
     )
   }
 };
