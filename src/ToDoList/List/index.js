@@ -14,9 +14,9 @@ const List = (props) => {
   const listElements = props.taskList.map(renderList);
 
   return (
-    <ul>
+    <div className="list">
       { listElements }
-    </ul>
+    </div>
   );
 }
 

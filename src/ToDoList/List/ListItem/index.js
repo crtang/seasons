@@ -12,15 +12,13 @@ const ListItem = (props) => {
   };
 
   return (
-    <li>
-      <label className="task">
-        <input className="is-task-done" type="checkbox" />
-        <span className="checkmark"></span>
-        <span className="task-content">{ props.task.item }</span>
-        <span className="edit-task" onClick={editThis}></span>
-        <span className="delete-task" onClick={deleteThis}></span>
-      </label>
-    </li>
+    <label className="checkbox">
+      <input className="is-task-done" type="checkbox" />
+      <span className="checkmark"></span>
+      <span className="task-content">{ props.task.item }</span>
+      <span className="edit-task" onClick={editThis}></span>
+      <span className="delete-task" onClick={deleteThis}></span>
+    </label>
   );
 };
 

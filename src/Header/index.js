@@ -1,11 +1,9 @@
 import React from 'react';
-import PageTitle from './PageTitle';
 
 const Header = () => {
   return (
     <header>
-      <h4 id="header-site-title">seasons</h4>
-      <PageTitle />
+      <h3 id="header_site-title">seasons</h3>
     </header>
   )
 };

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from "./Header";
+import PageTitle from "./PageTitle";
 import ClockAnalog from './ClockAnalog';
 import ToDoList from './ToDoList';
 
@@ -17,10 +18,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         <Header />
-        <ToDoList />
-      </div>
+        <div className="container">
+          <PageTitle />
+          <ToDoList />
+        </div>
+      </main>
     )
   };
 }
