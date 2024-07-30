@@ -15,10 +15,10 @@ class ToDoList extends Component {
     this.deleteTask = this.deleteTask.bind(this);
   };
 
-  addTask = () => {
+  addTask = (taskName) => {
     const newTask = {
       id: Date.now(),
-      item: "New task",
+      item: taskName,
     };
 
     const newTasks = [...this.state.taskList, newTask];
