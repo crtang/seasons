@@ -37,6 +37,7 @@ class Calendar extends Component {
   };
 
   previous = () => {
+    // need to temporarily remove .week elements from calendar
     const monthNow = this.state.month;
     const yearNow = this.state.year;
 
@@ -50,6 +51,8 @@ class Calendar extends Component {
   };
 
   next = () => {
+    // need to temporarily remove .week elements from calendar
+
     const monthNow = this.state.month;
     const yearNow = this.state.year;
 
