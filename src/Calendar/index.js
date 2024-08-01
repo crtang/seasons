@@ -7,8 +7,8 @@ class Calendar extends Component {
 
     this.state = {
       today: new Date(),
-      year: today.getFullYear(),
       month: today.getMonth(),
+      year: today.getFullYear(),
     };
   };
 
@@ -27,11 +27,16 @@ class Calendar extends Component {
       'november',
       'december'
     ];
+
+    const monthNum = this.state.month;
+    const yearToString = this.state.year.toString();
+
+    this.setState({ month: months[monthNum], year: yearToString })
   }
 
   render() {
     return (
-      <CalendarBase />
+      <CalendarBase month={this.state.month} year={this.state.year} />
     );
   };
 };
