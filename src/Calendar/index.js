@@ -9,6 +9,8 @@ class Calendar extends Component {
       today: new Date(),
       month: today.getMonth(),
       year: today.getFullYear(),
+      monthString: '',
+      yearString: ''
     };
   };
 
@@ -31,8 +33,34 @@ class Calendar extends Component {
     const monthNum = this.state.month;
     const yearToString = this.state.year.toString();
 
-    this.setState({ month: months[monthNum], year: yearToString })
-  }
+    this.setState({ monthString: months[monthNum].toString(), yearString: yearToString })
+  };
+
+  previous = () => {
+    const monthNow = this.state.month;
+    const yearNow = this.state.year;
+
+    if (this.state.month >= 1) {
+      this.setState({ month: monthNow - 1 })
+    } else if (this.state.month == 0) {
+      this.setState({ month: 11, year: yearNow - 1 });
+    }
+
+    return this.currentMonth();
+  };
+
+  next = () => {
+    const monthNow = this.state.month;
+    const yearNow = this.state.year;
+
+    if (this.state.month <= 10) {
+      this.setState({ month: monthNow + 1});
+    } else {
+      this.setState({ month: 0, year: yearNow + 1 });
+    }
+
+    return this.currentMonth();
+  };
 
   render() {
     return (
