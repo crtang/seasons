@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CalendarBase from './CalendarBase';
+import CalendarHeader from './CalendarHeader';
 
 class Calendar extends Component {
   constructor(props) {
@@ -65,9 +65,11 @@ class Calendar extends Component {
     return this.currentMonth();
   };
 
+
+
   render() {
     return (
-      <CalendarBase month={this.state.month} year={this.state.year} />
+      <CalendarHeader month={this.state.month} year={this.state.year} />
     );
   };
 };
