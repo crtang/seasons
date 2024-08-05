@@ -10,22 +10,22 @@ const CalendarBase = (props) => {
   };
 
   return (
-    <article id="calendar">
+    <div id="calendar-header">
       <span className="prev" onClick={prevMonth}>&#10094;</span>
       <span className="next" onClick={nextMonth}>&#10095;</span>
 
       <div id="cal-header">
-        <div id="month" className="item">{props.month} {props.year}</div>
+        <h2 id="month" className="item">{props.month} {props.year}</h2>
 
-        <div class="item wd">sun</div>
-        <div class="item wd">mon</div>
-        <div class="item wd">tues</div>
-        <div class="item wd">wed</div>
-        <div class="item wd">thu</div>
-        <div class="item wd">fri</div>
-        <div class="item wd">sat</div>
+        <h3 class="item wd">sun</h3>
+        <h3 class="item wd">mon</h3>
+        <h3 class="item wd">tues</h3>
+        <h3 class="item wd">wed</h3>
+        <h3 class="item wd">thu</h3>
+        <h3 class="item wd">fri</h3>
+        <h3 class="item wd">sat</h3>
       </div>
-    </article>
+    </div>
   );
 };
 

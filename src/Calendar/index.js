@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CalendarHeader from './CalendarHeader';
+import CalendarWeeks from './CalendarWeeks';
 
 class Calendar extends Component {
   constructor(props) {
@@ -69,7 +70,10 @@ class Calendar extends Component {
 
   render() {
     return (
-      <CalendarHeader month={this.state.month} year={this.state.year} />
+      <article id="calendar">
+        <CalendarHeader month={this.state.month} year={this.state.year} />
+        <CalendarWeeks month={this.state.month} year={this.state.year} />
+      </article>  
     );
   };
 };
