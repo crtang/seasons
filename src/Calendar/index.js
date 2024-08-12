@@ -59,7 +59,7 @@ class Calendar extends Component {
   render() {
     return (
       <article id="month-calendar">
-        <CalendarHeader />
+        <CalendarHeader month={this.state.m} year={this.state.y} />
       </article>
     );
   };
