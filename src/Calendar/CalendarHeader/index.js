@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const CalendarHeader = (props) => {
-  const displayMonth = m + y;
+  const displayMonth = props.m + ' ' + props.y;
 
   const calculatePrevMonth = () => {
     return props.getPreviousMonth();

@@ -5,8 +5,9 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
 
+    const today = new Date();
+
     this.state = {
-      today: new Date(),
       month: today.getMonth(),
       year: today.getFullYear(),
       months: [
@@ -23,36 +24,52 @@ class Calendar extends Component {
         'november',
         'december'
       ],
-      m: months[month].toString(),
-      y: year.toString(),
+      m: 'month',
+      y: 'year',
     };
   };
 
   getPreviousMonth = () => {
     const newMonth = 0;
 
-    if (month >= 1) {
-      newMonth = month - 1;
-      this.setState({ month: newMonth });
-    } else if (month == 0) {
+    if (this.state.month >= 1) {
+      newMonth = this.state.month - 1;
+      const updatedM = this.state.months[newMonth];
+      this.setState({ month: newMonth, m: updatedM });
+    } else if (this.state.month == 0) {
       newMonth = 11;
-      const newYear = year - 1;
+      const updatedM = this.state.months[newMonth];
+      const newYear = this.state.year - 1;
+      const updatedY = newYear.toString();
 
-      this.setState({ month: newMonth, year: newYear });
+      this.setState({
+        month: newMonth,
+        year: newYear,
+        m: updatedM,
+        y: updatedY 
+      });
     }
   };
 
   getNextMonth = () => {
     const newMonth = 0;
 
-    if (month < 11) {
-      newMonth = month + 1;
-      this.setState({ month: newMonth });
-    } else if (month == 11) {
+    if (this.state.month < 11) {
+      newMonth = this.state.month + 1;
+      const updatedM = this.state.months[newMonth];
+      this.setState({ month: newMonth, m: updatedM });
+    } else if (this.state.month == 11) {
       newMonth = 0;
-      const newYear = year + 1;
+      const updatedM = this.state.months[newMonth];
+      const newYear = this.state.year + 1;
+      const updatedY = newYear.toString();
 
-      this.setState({ month: newMonth, year: newYear });
+      this.setState({
+        month: newMonth,
+        year: newYear,
+        m: updatedM,
+        y: updatedY 
+      });
     }
   };
   

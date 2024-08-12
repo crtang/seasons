@@ -4,6 +4,7 @@ import Header from "./Header";
 import PageTitle from "./PageTitle";
 import ClockAnalog from './ClockAnalog';
 import ToDoList from './ToDoList';
+import Calendar from './Calendar';
 
 class App extends Component {
   // LATER - figure out how to integrate with BE (Node.js)
@@ -23,6 +24,7 @@ class App extends Component {
         <div className="container">
           <PageTitle />
           <ToDoList />
+          <Calendar />
         </div>
       </main>
     )

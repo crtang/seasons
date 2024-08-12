@@ -1,4 +1,4 @@
-import React from 'reactz';
+import React from 'react';
 
 const ClockFace = () => {
   return (
