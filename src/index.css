@@ -10,6 +10,11 @@
   src: url('fonts/GothamSSm-Light.otf');
 }
 
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('fonts/GothamSSm-Medium.otf');
+}
+
 
 :root,
   :root.spring {
@@ -83,6 +88,7 @@ p {
 }
 
 #header_site-title {
+  font-family: 'Gotham Light', sans-serif;
   font-size: 18px;
 }
 
@@ -226,12 +232,14 @@ input[type="text"] {
   flex-flow: row nowrap;
   position: relative;
   height: 150px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   background-color: var(--color-3);
 }
 
 #prev-month, #next-month {
   position: absolute;
-  font: 20px 'Gotham Light', sans-serif;
+  font: 20px 'Gotham Medium', sans-serif;
   color: var(--color-2);
   z-index: 10;
   cursor: pointer;
@@ -246,6 +254,8 @@ input[type="text"] {
 }
 
 .cal-display {
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
   color: var(--color-2);
 }
 
@@ -256,6 +266,7 @@ input[type="text"] {
   position: relative;
   width: 100%;
   background-color: var(--color-7);
+  font-family: 'Gotham Medium', sans-serif;
   bottom: 0;
 }
 
