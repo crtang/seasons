@@ -29,6 +29,16 @@ class Calendar extends Component {
     };
   };
 
+  componentDidMount = () => {
+    return this.getCurrentMonth();
+  }
+
+  getCurrentMonth = () => {
+    const currentMonth = this.state.months[this.state.month];
+    const currentYear = this.state.year.toString();
+    this.setState({ m: currentMonth, y: currentYear });
+  }
+
   getPreviousMonth = () => {
     const newMonth = 0;
 
@@ -76,7 +86,7 @@ class Calendar extends Component {
   render() {
     return (
       <article id="month-calendar">
-        <CalendarHeader month={this.state.m} year={this.state.y} />
+        <CalendarHeader m={this.state.m} y={this.state.y} getPreviousMonth={this.getPreviousMonth} getNextMonth={this.getNextMonth} />
       </article>
     );
   };

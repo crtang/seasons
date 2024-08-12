@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 
-const CalendarHeader = (props) => {
-  const displayMonth = props.m + ' ' + props.y;
-
-  const calculatePrevMonth = () => {
+const CalendarHeader = (props) => {const calculatePrevMonth = () => {
     return props.getPreviousMonth();
   };
 
@@ -15,7 +12,7 @@ const CalendarHeader = (props) => {
     <div id="cal-header">
       <span id="prev-month" onChange={calculatePrevMonth}>&#10094;</span>
 
-      <span>{ displayMonth }</span>
+      <span>{ props.m + ' ' + props.y }</span>
 
       <span id="next-month" onChange={calculateNextMonth}>&#10095;</span>
 
