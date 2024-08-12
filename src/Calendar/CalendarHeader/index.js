@@ -10,13 +10,15 @@ const CalendarHeader = (props) => {const calculatePrevMonth = () => {
 
   return (
     <div id="cal-header">
-      <span id="prev-month" onChange={calculatePrevMonth}>&#10094;</span>
+      <div class="cal-controls">
+        <p id="prev-month" onChange={calculatePrevMonth}>&#10094;</p>
+        
+        <p>{ props.m + ' ' + props.y }</p>
+        
+        <p id="next-month" onChange={calculateNextMonth}>&#10095;</p>
+      </div>
 
-      <span>{ props.m + ' ' + props.y }</span>
-
-      <span id="next-month" onChange={calculateNextMonth}>&#10095;</span>
-
-      <div>
+      <div id="weekdays">
         <div className="item wd">sun</div>
         <div className="item wd">mon</div>
         <div className="item wd">tues</div>
