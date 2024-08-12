@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
 
-const CalendarHeader = (props) => {const calculatePrevMonth = () => {
-    return props.getPreviousMonth();
+const CalendarHeader = (props) => {
+  let currentMonth = props.m + ' ' + props.y;
+
+  const calculatePrevMonth = () => {
+    props.getPreviousMonth();
+    currentMonth = props.m + ' ' + props.y;
+    return currentMonth;
   };
 
   const calculateNextMonth = () => {
-    return props.getNextMonth();
+    props.getNextMonth();
+    currentMonth = props.m + ' ' + props.y;
+    return currentMonth;
   };
 
   return (
     <div id="cal-header">
-      <div class="cal-controls">
-        <p id="prev-month" onChange={calculatePrevMonth}>&#10094;</p>
+      <div className="cal-controls">
+        <p id="prev-month" onClick={calculatePrevMonth}>&#10094;</p>
         
-        <p>{ props.m + ' ' + props.y }</p>
+        <p className="cal-display">{ currentMonth }</p>
         
-        <p id="next-month" onChange={calculateNextMonth}>&#10095;</p>
+        <p id="next-month" onClick={calculateNextMonth}>&#10095;</p>
       </div>
 
       <div id="weekdays">

@@ -40,7 +40,7 @@ class Calendar extends Component {
   }
 
   getPreviousMonth = () => {
-    const newMonth = 0;
+    let newMonth = 0;
 
     if (this.state.month >= 1) {
       newMonth = this.state.month - 1;
@@ -62,7 +62,7 @@ class Calendar extends Component {
   };
 
   getNextMonth = () => {
-    const newMonth = 0;
+    let newMonth = 0;
 
     if (this.state.month < 11) {
       newMonth = this.state.month + 1;

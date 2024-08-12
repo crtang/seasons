@@ -245,6 +245,10 @@ input[type="text"] {
   right: 25px;
 }
 
+.cal-display {
+  color: var(--color-2);
+}
+
 #weekdays {
   display: flex;
   justify-content: space-around;
