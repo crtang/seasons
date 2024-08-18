@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactComponent as DeleteIcon } from '../../images/trash.svg';
 
 const ListItem = (props) => {
   const editThis = () => {
@@ -18,7 +19,7 @@ const ListItem = (props) => {
       <span className="task-content">{ props.task.item }</span>
       <span className="list-option-container">
         {/*<span className="edit-task" onClick={editThis}>E</span>*/}
-        <span className="delete-task" onClick={deleteThis}>X</span>
+        <span className="delete-task" onClick={deleteThis}><DeleteIcon /></span>
       </span>
     </label>
   );

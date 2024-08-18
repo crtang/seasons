@@ -25,7 +25,7 @@
     --color-5: #cea52b;
     --color-6: #ce922b;
     --color-7: #99b433;
-    --color-8: #0a5c4e;
+    --color-8: #0d7866;
   }
 
 body {
@@ -111,7 +111,7 @@ p {
 
 #enter-task {
   box-sizing: border-box;
-  border: 1px solid var(--color-7);
+  border: 1px solid var(--color-5);
   border-radius: 5px;
   width: 80%;
   padding: 5px;
@@ -133,7 +133,7 @@ p {
 
 #enter-task {
   outline: none;
-  border: 1px solid var(--color-7);
+  border: 1px solid var(--color-5);
   color: var(--color-1);
 }
 
@@ -218,8 +218,17 @@ p {
   color: var(--color-1);
 }*/
 
-.delete {
-  color: var(--color-6);
+svg {
+  width: 20px;
+  height: auto;
+}
+
+svg path {
+  fill: var(--color-7);
+}
+
+svg path:hover {
+  fill: var(--color-4);
 }
 
 
