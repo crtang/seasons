@@ -13,11 +13,7 @@ const List = (props) => {
 
   const listElements = props.taskList.map(renderList);
 
-  return (
-    <div className="list">
-      { listElements }
-    </div>
-  );
+  return <div className="list">{ listElements }</div>;
 }
 
 export default List;

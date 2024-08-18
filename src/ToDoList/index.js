@@ -7,16 +7,17 @@ class ToDoList extends Component {
     super(props);
 
     this.state = {
-      taskList: [ { } ],
+      taskList: [ ],
     };
 
+    this.addTask = this.addTask.bind(this);
     this.editTask = this.editTask.bind(this);
     this.deleteTask = this.deleteTask.bind(this);
   };
 
   addTask = (taskName) => {
     const newTask = {
-      id: Date.now(),
+      id: new Date(),
       item: taskName,
     };
 
@@ -42,13 +43,7 @@ class ToDoList extends Component {
   deleteTask = (id) => {
     // find id of element
     // delete task
-    const updatedTasks = this.state.taskList.map((task) => {
-      if (task.id !== id) {
-        return task;
-      } else {
-        return { ...this.state.taskList };
-      }
-    });
+    const updatedTasks = this.state.taskList.filter((task) => task.id !== id);
     
     this.setState({ taskList: updatedTasks });
   };
