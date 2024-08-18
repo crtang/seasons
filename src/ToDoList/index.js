@@ -25,16 +25,15 @@ class ToDoList extends Component {
     this.setState({ taskList: newTasks});
   };
 
-  editTask = (id, updatedValue) => {
+  editTask = (id, updatedTask) => {
     // find id of element
     const updatedTasks = this.state.taskList.map((task) => {
       // find id of task
       if (task.id !== id) {
-        return task;
-      } else {
-        task.item = updatedValue;
-        return task;
+        task.item = updatedTask;
       }
+
+      return task;
     });
 
     this.setState({ taskList: updatedTasks });

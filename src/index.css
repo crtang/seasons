@@ -218,6 +218,10 @@ p {
   color: var(--color-1);
 }*/
 
+.delete {
+  color: var(--color-6);
+}
+
 
 
 /******************/
