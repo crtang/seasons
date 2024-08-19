@@ -15,6 +15,26 @@ class ToDoList extends Component {
     this.deleteTask = this.deleteTask.bind(this);
   };
 
+  componentDidMount() {
+    const storedTasks = localStorage.getItem("taskList");
+
+    if (storedTasks) {
+      this.state.taskList = JSON.parse(storedTasks);
+    }
+  };
+
+  componentDidUpdate() {
+    const savedTasks = JSON.stringify(this.state.taskList);
+
+    try {
+      localStorage.setItem("taskList", savedTasks);
+    } catch (e) {
+      if (e.code === "22" || e.code === "1024") {
+        alert('Storage quota exceeded! Please delete tasks or click the "Clear All" button.');
+      }
+    }
+  };
+
   addTask = (taskName) => {
     const newTask = {
       id: new Date(),
@@ -29,7 +49,7 @@ class ToDoList extends Component {
     // find id of element
     const updatedTasks = this.state.taskList.map((task) => {
       // find id of task
-      if (task.id !== id) {
+      if (task.id === id) {
         task.item = updatedTask;
       }
 

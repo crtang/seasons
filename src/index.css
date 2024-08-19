@@ -78,6 +78,10 @@ p {
   line-height: 1.15;
 }
 
+input {
+  font-family: 'Gotham Light', sans-serif;
+}
+
 
 
 /***************/
@@ -109,12 +113,14 @@ p {
   align-items: center;
 }
 
-#enter-task {
+#enter-task, .editing-area {
   box-sizing: border-box;
+  outline: none;
   border: 1px solid var(--color-5);
   border-radius: 5px;
   width: 80%;
   padding: 5px;
+  color: var(--color-1);
 }
 
 #add-task {
@@ -127,14 +133,9 @@ p {
   cursor: pointer;
 }
 
-#add-task:hover {
+#add-task:hover, .btn:hover {
   background-color: var(--color-8);
-}
-
-#enter-task {
-  outline: none;
-  border: 1px solid var(--color-5);
-  color: var(--color-1);
+  cursor: pointer;
 }
 
 .list {
@@ -153,17 +154,23 @@ p {
 /* container */
 .checkbox {
   display: flex;
-  justify-content: space-between;
+  flex-flow: column wrap;
   position: relative;
   margin: 0 0 1.75em 0;
   padding-left: 5%;
   user-select: none;
 }
 
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 4.5px;
   left: 0;
   height: 12px;
   width: 12px;
@@ -214,10 +221,6 @@ p {
   transform: rotate(-45deg);
 }
 
-/*.edit-task, .delete-task {
-  color: var(--color-1);
-}*/
-
 svg {
   width: 20px;
   height: auto;
@@ -229,6 +232,43 @@ svg path {
 
 svg path:hover {
   fill: var(--color-4);
+}
+
+.list-editor {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  outline: none;
+  border: 1px solid var(--color-5);
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.editing-template {
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--color-5);
+}
+
+.et-btns {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  padding-top: 10px;
+}
+
+.btn {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px 8px;
+  width: 25%;
+  background-color: var(--color-3);
+  opacity: 2;
+  color: var(--color-2);
 }
 
 
