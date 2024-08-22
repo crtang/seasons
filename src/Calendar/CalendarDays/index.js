@@ -4,13 +4,10 @@ const CalendarDays = (props) => {
   let firstDayOfMonth = new Date(props.year, props.month, 1);
   const totalDays = new Date(props.year, props.month, 0);
 
-  // let days = firstDayOfMonth;
   let weekdayOfFirstDay = firstDayOfMonth.getDay();
   let numOfWeeks = [];
   let currentDays = [];
   let daysOfMonth = [];
-  // let monthBefore = [];
-  // let monthAfter = [];
 
   for (let day = 0; day < 42; day++) {
     if (day === 0 && weekdayOfFirstDay === 0) {
@@ -35,22 +32,42 @@ const CalendarDays = (props) => {
   }
 
   if (totalDays === 28 && weekdayOfFirstDay === 0) {
-    numOfWeeks = [0, 1, 2, 3];
+    numOfWeeks = [1, 2, 3, 4];
   } else if ((totalDays === 30 && weekdayOfFirstDay === 6) || (totalDays === 31 && weekdayOfFirstDay >= 5)) {
-    numOfWeeks = [0, 1, 2, 3, 4, 5];
+    numOfWeeks = [1, 2, 3, 4, 5, 6];
   } else {
-    numOfWeeks = [0, 1, 2, 3, 4];
+    numOfWeeks = [1, 2, 3, 4, 5];
   }
 
   return (
     <div id="weeks-container">
-      {
+      {/*{
         daysOfMonth.map((day) => {
           return (
-            <div className={"item days" + (day.month === props.month ? " month" : "")} id={(day.toDateString() === props.day.toDateString() ? " selected" : "")} key={day.key} >
+            <div className={"item days" + (day.month === props.month ? " month" : "") + (day.toDateString() === props.day.toDateString() ? " selected" : "")} key={day.key} >
               <p>{ day.number }</p>
             </div>
           )
+        })
+      }*/}
+
+      {
+        numOfWeeks.map((week) => {
+          return (
+            <div className="weeks" id={week}>
+              {
+                daysOfMonth.map((day) => {
+                  if (day.key >= (week - 1) * 7 && day.key < week * 7) {
+                    return (
+                      <div className={"item days" + (day.month === props.month ? " month" : "") + (day.number === props.day.getDate() ? " selected" : "")} key={day.key} >
+                        <p>{ day.number }</p>
+                      </div>
+                    )
+                  }
+                })
+              }
+            </div>
+          );
         })
       }
     </div>
