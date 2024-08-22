@@ -109,6 +109,7 @@ footer {
 }
 
 #header_site-title {
+  width: 100%;
   font-family: 'Gotham Light', sans-serif;
   font-size: 18px;
 }
@@ -382,6 +383,132 @@ svg path:hover {
   margin: 0;
 }
 
+/*************/
+/* SVG CLOCK */
+/*************/
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#svg-clock {
+  position: relative;
+  margin: 0 0 30px 0;
+  width: 200px;
+  font-family: 'Gotham Light', sans-serif;
+  font-size: 4px;
+  fill: var(--color-2);
+  stroke: var(--color-3);
+  stroke-width: 5;
+}
+
+#clock-face {
+  width: 100;
+}
+
+#numbers {
+  transform: translate(28.5px, 31.5px);
+  fill: var(--color-5);
+  stroke: none;
+}
+
+#numbers .num {
+  font-family: 'Gotham Light', sans-serif;
+  font-size: 14px;
+  fill: var(--color-5);
+  stroke: none;
+}
+
+#numbers > text:nth-child(1) {
+	transform: translate(65px, -2.5px); /* 12 */
+}
+
+#numbers > text:nth-child(2) {
+	transform: translate(107.5px, 7.75px); /* 1 */
+}
+
+#numbers > text:nth-child(3) {
+	transform: translate(132px, 36.5px); /* 2 */
+}
+
+#numbers > text:nth-child(4) {
+	transform: translate(145px, 74px); /* 3 */
+}
+
+#numbers > text:nth-child(5) {
+	transform: translate(132px, 109.5px); /* 4 */
+}
+
+#numbers > text:nth-child(6) {
+	transform: translate(106.5px, 138px); /* 5 */
+}
+
+#numbers > text:nth-child(7) {
+	transform: translate(67.25px, 150px); /* 6 */
+}
+
+#numbers > text:nth-child(8) {
+	transform: translate(30.5px, 138px); /* 7 */
+}
+
+#numbers > text:nth-child(9) {
+	transform: translate(1.5px, 109.5px); /* 8 */
+}
+
+#numbers > text:nth-child(10) {
+	transform: translate(-10px, 74px); /* 9 */
+}
+
+#numbers > text:nth-child(11) {
+	transform: translate(1.5px, 36.5px); /* 10 */
+}
+
+#numbers > text:nth-child(12) {
+	transform: translate(30px, 7.75px); /* 11 */
+}
+
+text.ct {
+  font-family: 'Josefin Slab', serif;
+  font-size: 12px;
+  fill: var(--color-3);
+  stroke: none;
+}
+
+#second {
+  fill: none;
+  stroke: var(--color-5);
+  stroke-width: 1;
+  stroke-miterlimit: 10;
+  transform-origin: 100px 100px;
+}
+
+#minute {
+  fill: none;
+  stroke: var(--color-4);
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  transform-origin: 100px 100px;
+}
+
+#hour {
+  fill: none;
+  stroke: var(--color-7);
+  stroke-width: 3.25;
+  stroke-miterlimit: 10;
+  transform-origin: 100px 100px;
+}
+
+.sizing-box {
+  fill: none;
+}
+
+.pin {
+  fill: var(--color-2);
+  stroke: var(--color-6);
+  stroke-width:2;
+}
+
 
 
 /* MEDIA QUERIES */
@@ -392,6 +519,11 @@ svg path:hover {
 }
 
 @media (min-width: 1200px) {
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
   .container {
     width: 50%;
   }

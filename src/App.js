@@ -23,10 +23,13 @@ class App extends Component {
       <Fragment>
         <main>
           <Header />
+          <PageTitle />
           <div className="container">
-            <PageTitle />
             <ToDoList />
             <Calendar />
+          </div>
+          <div className="container">
+            <ClockAnalog />
           </div>
         </main>
         <Footer />
