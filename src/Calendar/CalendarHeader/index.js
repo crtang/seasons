@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const CalendarHeader = (props) => {
   let currentMonth = props.m + ' ' + props.y;

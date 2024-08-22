@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CalendarHeader from './CalendarHeader';
-import CalendarWeeks from './CalendarWeeks';
+import CalendarDays from './CalendarDays';
 
 class Calendar extends Component {
   constructor(props) {
@@ -9,8 +9,8 @@ class Calendar extends Component {
     const today = new Date();
 
     this.state = {
-      month: today.getMonth(),
-      year: today.getFullYear(),
+      month: today.getMonth(), // index in array
+      year: today.getFullYear(), // integer
       months: [
         'january',
         'february',
@@ -25,20 +25,21 @@ class Calendar extends Component {
         'november',
         'december'
       ],
-      m: 'month',
-      y: 'year',
+      m: 'month', // name of month to string
+      y: 'year', // year to string
+      currentDay: new Date()
     };
   };
 
   componentDidMount = () => {
     return this.getCurrentMonth();
-  }
+  };
 
   getCurrentMonth = () => {
     const currentMonth = this.state.months[this.state.month];
     const currentYear = this.state.year.toString();
     this.setState({ m: currentMonth, y: currentYear });
-  }
+  };
 
   getPreviousMonth = () => {
     let newMonth = 0;
@@ -83,12 +84,16 @@ class Calendar extends Component {
       });
     }
   };
+
+  changeCurrentDay = (day) => {
+    this.setState({ currentDay: new Date(day.year, day.month, day.number) });
+  };
   
   render() {
     return (
       <article id="month-calendar">
         <CalendarHeader m={this.state.m} y={this.state.y} getPreviousMonth={this.getPreviousMonth} getNextMonth={this.getNextMonth} />
-        <CalendarWeeks month={this.state.month} year={this.state.year} />
+        <CalendarDays month={this.state.month} year={this.state.year} day={this.state.currentDay} changeCurrentDay={this.changeCurrentDay} />
       </article>
     );
   };
