@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import CalendarHeader from './CalendarHeader';
-import CalendarDays from './CalendarDays';
+import CalendarBody from './CalendarBody';
 
 class Calendar extends Component {
   constructor(props) {
@@ -92,8 +91,15 @@ class Calendar extends Component {
   render() {
     return (
       <article id="month-calendar">
-        <CalendarHeader m={this.state.m} y={this.state.y} getPreviousMonth={this.getPreviousMonth} getNextMonth={this.getNextMonth} />
-        <CalendarDays month={this.state.month} year={this.state.year} day={this.state.currentDay} changeCurrentDay={this.changeCurrentDay} />
+        <CalendarBody
+          m={this.state.m}
+          y={this.state.y}
+          month={this.state.month}
+          year={this.state.year}
+          day={this.state.currentDay}
+          getPreviousMonth={this.getPreviousMonth}
+          getNextMonth={this.getNextMonth}
+        />
       </article>
     );
   };
