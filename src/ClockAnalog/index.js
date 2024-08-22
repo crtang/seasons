@@ -1,6 +1,4 @@
 import React, { Component, useState } from 'react';
-import { Context } from 'svgcanvas';
-import ClockFace from './ClockFace';
 
 class ClockAnalog extends Component {
   // store time as state
