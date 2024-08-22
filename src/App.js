@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import Header from "./Header";
 import PageTitle from "./PageTitle";
 import ClockAnalog from './ClockAnalog';
 import ToDoList from './ToDoList';
 import Calendar from './Calendar';
+import Footer from './Footer';
 
 class App extends Component {
   // LATER - figure out how to integrate with BE (Node.js)
@@ -19,14 +20,17 @@ class App extends Component {
 
   render() {
     return (
-      <main>
-        <Header />
-        <div className="container">
-          <PageTitle />
-          <ToDoList />
-          <Calendar />
-        </div>
-      </main>
+      <Fragment>
+        <main>
+          <Header />
+          <div className="container">
+            <PageTitle />
+            <ToDoList />
+            <Calendar />
+          </div>
+        </main>
+        <Footer />
+      </Fragment>
     )
   };
 }
