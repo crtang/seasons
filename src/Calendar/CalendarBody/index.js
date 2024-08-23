@@ -42,7 +42,7 @@ const CalendarHeader = (props) => {
       key: day,
       number: firstDayOfMonth.getDate(),
       month: firstDayOfMonth.getMonth(),
-      currentMonth: (firstDayOfMonth.getMonth() === props.day.getMonth())
+      currentMonth: (firstDayOfMonth.getMonth())
     }
 
     currentDays.push(calendarDay);
@@ -88,7 +88,7 @@ const CalendarHeader = (props) => {
                           className={
                             "item days" + 
                             (day.currentMonth === props.month ? " month" : "") + 
-                            (day.number === props.day.getDate() ? " selected" : "") +
+                            (day.number === props.day.getDate() && day.currentMonth === props.day.getMonth() ? " selected" : "") +
                             (week === numOfWeeks.length && day.key === (week - 1) * 7 ? " last-first" : "") +
                             (week === numOfWeeks.length && day.key === (week * 7 - 1) ? " last-last" : "")
                           }
