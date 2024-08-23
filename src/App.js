@@ -21,16 +21,18 @@ class App extends Component {
   render() {
     return (
       <Fragment>
+        <Header />
         <main>
-          <Header />
           <PageTitle />
-          <div className="container">
-            <ToDoList />
-            <Calendar />
-          </div>
-          <div className="container">
-            <ClockAnalog />
-          </div>
+          <Fragment id="flex">
+            <div className="container left">
+              <ClockAnalog />
+              <ToDoList />
+            </div>
+            <div className="container right">
+              <Calendar />
+            </div>
+          </Fragment>
         </main>
         <Footer />
       </Fragment>

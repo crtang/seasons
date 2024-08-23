@@ -2,7 +2,7 @@ import React from 'react';
 
 const PageTitle = () => {
   return (
-    <h1>productivity center</h1>
+    <h1 id="app-purpose">productivity center</h1>
   );
 };
 

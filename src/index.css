@@ -538,11 +538,22 @@ text.ct {
 
 @media (min-width: 1200px) {
   main {
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-areas:  "page-title page-title"
+                          "left-column right-column";
+    grid-template-rows: 100px min-content;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .container {
-    width: 50%;
+  #app-purpose {
+    grid-area: page-title;
+  }
+
+  .left {
+    grid-area: left-column;
+  }
+
+  .right {
+    grid-area: right-column;
   }
 }
