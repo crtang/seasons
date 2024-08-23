@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.7bf3d769.css",
+    "main.js": "/react-gh-pages/static/js/main.a4facb7d.js",
+    "static/media/GothamSSm-Medium.otf": "/react-gh-pages/static/media/GothamSSm-Medium.900495a1707caea44098.otf",
+    "static/media/GothamSSm-Light.otf": "/react-gh-pages/static/media/GothamSSm-Light.363ec693f50a36bfefe8.otf",
+    "static/media/JosefinSlab-VariableFont_wght.ttf": "/react-gh-pages/static/media/JosefinSlab-VariableFont_wght.6a4e168263c2ebe1d56c.ttf",
+    "static/media/trash.svg": "/react-gh-pages/static/media/trash.cc99d9857331b4d4e0052b7ab9e664e2.svg",
+    "index.html": "/react-gh-pages/index.html",
+    "static/media/edit.svg": "/react-gh-pages/static/media/edit.d51a722eedb17247a07d9b811fc53f27.svg",
+    "main.7bf3d769.css.map": "/react-gh-pages/static/css/main.7bf3d769.css.map",
+    "main.a4facb7d.js.map": "/react-gh-pages/static/js/main.a4facb7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bf3d769.css",
+    "static/js/main.a4facb7d.js"
+  ]
+}
