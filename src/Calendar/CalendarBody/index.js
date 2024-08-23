@@ -77,14 +77,23 @@ const CalendarHeader = (props) => {
       </div>
       <div id="weeks-container">
         {
-          numOfWeeks.map((week) => {
+          numOfWeeks.map((week, i, numOfWeeks) => {
             return (
-              <div className="weeks" id={week}>
+              <div className={"weeks" + (i + 1 === numOfWeeks.length ? " last" : "")} id={week}>
                 {
                   daysOfMonth.map((day) => {
                     if (day.key >= (week - 1) * 7 && day.key < week * 7) {
                       return (
-                        <div className={"item days" + (day.currentMonth === props.month ? " month" : "") + (day.number === props.day.getDate() ? " selected" : "")} key={day.key} >
+                        <div
+                          className={
+                            "item days" + 
+                            (day.currentMonth === props.month ? " month" : "") + 
+                            (day.number === props.day.getDate() ? " selected" : "") +
+                            (week === numOfWeeks.length && day.key === (week - 1) * 7 ? " last-first" : "") +
+                            (week === numOfWeeks.length && day.key === (week * 7 - 1) ? " last-last" : "")
+                          }
+                          key={day.key} 
+                        >
                           <p>{ day.number }</p>
                         </div>
                       )

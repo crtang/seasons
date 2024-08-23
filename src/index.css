@@ -383,6 +383,14 @@ svg path:hover {
   margin: 0;
 }
 
+.last-first {
+  border-radius: 0 0 0 7px;
+}
+
+.last-last {
+  border-radius: 0 0 7px 0;
+}
+
 /*************/
 /* SVG CLOCK */
 /*************/
