@@ -396,7 +396,12 @@ svg path:hover {
 }
 
 .selected {
-  background-color: var(--color-4)
+  background-color: var(--color-5);
+}
+
+.selected p {
+  font-family: 'Gotham Medium';
+  color: var(--color-2);
 }
 
 

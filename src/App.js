@@ -24,15 +24,13 @@ class App extends Component {
         <Header />
         <main>
           <PageTitle />
-          <Fragment id="flex">
-            <div className="container left">
-              <ClockAnalog />
-              <ToDoList />
-            </div>
-            <div className="container right">
-              <Calendar />
-            </div>
-          </Fragment>
+          <div className="container left">
+            <ClockAnalog />
+            <ToDoList />
+          </div>
+          <div className="container right">
+            <Calendar />
+          </div>
         </main>
         <Footer />
       </Fragment>
