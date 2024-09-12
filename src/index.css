@@ -18,7 +18,7 @@
 
 :root,
   :root.spring {
-    --color-1: #4e4a4e;
+    --color-1: #222222; /* 4e4a4e */
     --color-2: #ffffff;
     --color-3: #12a38c;
     --color-4: #cfe386;
