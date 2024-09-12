@@ -320,7 +320,7 @@ svg path:hover {
 #prev-month, #next-month {
   position: absolute;
   font: 20px 'Gotham Medium', sans-serif;
-  color: var(--color-2);
+  color: var(--color-1);
   z-index: 10;
   cursor: pointer;
 }
@@ -361,7 +361,7 @@ svg path:hover {
 
 .wd {
   background-color: var(--color-7);
-  color: var(--color-2);
+  color: var(--color-1);
 }
 
 #weeks-container {
@@ -401,7 +401,7 @@ svg path:hover {
 
 .selected p {
   font-family: 'Gotham Medium';
-  color: var(--color-2);
+  color: var(--color-1);
 }
 
 
