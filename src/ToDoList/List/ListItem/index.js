@@ -38,7 +38,7 @@ const ListItem = (props) => {
 
   const editingTemplate = (
     <form className="editing-template" onSubmit={saveEdit}>
-      <input id={props.task.id} className="editing-area" type="text" value={editedTask} onChange={editThis} />
+      <input id={props.task.id} className="editing-area" type="text" placeholder={props.task.item} value={editedTask} onChange={editThis} />
       <div className="et-btns">
         <button className="btn edit-cancel" type="button" onClick={() => setEditing(false)}>
           cancel
