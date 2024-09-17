@@ -149,7 +149,7 @@ footer {
   padding: 2% 5%;
   background-color: var(--color-3);
   color: var(--color-2);
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
   cursor: pointer;
 }
 
@@ -322,7 +322,7 @@ svg path:hover {
   position: absolute;
   font: 20px 'Gotham Medium', sans-serif;
   color: var(--color-2);
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
   z-index: 10;
   cursor: pointer;
 }
@@ -339,7 +339,7 @@ svg path:hover {
   font-family: 'Josefin Slab', serif;
   font-size: 30px;
   color: var(--color-2);
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 #weekdays {
@@ -365,7 +365,7 @@ svg path:hover {
 .wd {
   background-color: var(--color-7);
   color: var(--color-2);
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 #weeks-container {
@@ -406,7 +406,7 @@ svg path:hover {
 .selected p {
   font-family: 'Gotham Medium';
   color: var(--color-2);
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 
