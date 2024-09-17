@@ -27,10 +27,14 @@ const ListItem = (props) => {
   const viewTemplate = (
     <div className="list-item">
       <input className="is-task-done" type="checkbox" />
+
       <span className="checkmark"></span>
+
       <span className="task-content">{ props.task.item }</span>
+
       <span className="list-option-container">
         <span className="edit-task" onClick={() => setEditing(true)}><EditIcon /></span>
+        
         <span className="delete-task" onClick={deleteThis}><DeleteIcon /></span>
       </span>
     </div>
@@ -39,6 +43,7 @@ const ListItem = (props) => {
   const editingTemplate = (
     <form className="editing-template" onSubmit={saveEdit}>
       <input id={props.task.id} className="editing-area" type="text" placeholder={props.task.item} value={editedTask} onChange={editThis} />
+
       <div className="et-btns">
         <button className="btn edit-cancel" type="button" onClick={() => setEditing(false)}>
           cancel

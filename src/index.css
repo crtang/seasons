@@ -18,13 +18,13 @@
 
 :root,
   :root.spring {
-    --color-1: #4e4a4e; /* 222222 */
+    --color-1: #222222; /* 4e4a4e */
     --color-2: #ffffff;
     --color-3: #12a38c;
     --color-4: #cfe386;
     --color-5: #cea52b;
     --color-6: #ce922b;
-    --color-7: #99b433;
+    --color-7: #99b433; /* 99b433 */
     --color-8: #0d7866;
   }
 
@@ -148,8 +148,8 @@ footer {
   border-radius: 5px;
   padding: 2% 5%;
   background-color: var(--color-3);
-  color: var(--color-2);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  font-family: 'Gotham Medium', sans-serif;
+  color: var(--color-1);
   cursor: pointer;
 }
 
@@ -321,8 +321,7 @@ svg path:hover {
 #prev-month, #next-month {
   position: absolute;
   font: 20px 'Gotham Medium', sans-serif;
-  color: var(--color-2);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  color: var(--color-1);
   z-index: 10;
   cursor: pointer;
 }
@@ -338,8 +337,7 @@ svg path:hover {
 .cal-display {
   font-family: 'Josefin Slab', serif;
   font-size: 30px;
-  color: var(--color-2);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  color: var(--color-1);
 }
 
 #weekdays {
@@ -364,8 +362,7 @@ svg path:hover {
 
 .wd {
   background-color: var(--color-7);
-  color: var(--color-2);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  color: var(--color-1);
 }
 
 #weeks-container {
@@ -405,8 +402,7 @@ svg path:hover {
 
 .selected p {
   font-family: 'Gotham Medium';
-  color: var(--color-2);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  color: var(--color-1);
 }
 
 
