@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/seasons/static/css/main.3b02e7d9.css",
+    "main.css": "/seasons/static/css/main.91f29e9c.css",
     "main.js": "/seasons/static/js/main.44770e02.js",
     "static/media/GothamSSm-Medium.otf": "/seasons/static/media/GothamSSm-Medium.900495a1707caea44098.otf",
     "static/media/GothamSSm-Light.otf": "/seasons/static/media/GothamSSm-Light.363ec693f50a36bfefe8.otf",
@@ -8,11 +8,11 @@
     "static/media/trash.svg": "/seasons/static/media/trash.cc99d9857331b4d4e0052b7ab9e664e2.svg",
     "static/media/edit.svg": "/seasons/static/media/edit.d51a722eedb17247a07d9b811fc53f27.svg",
     "index.html": "/seasons/index.html",
-    "main.3b02e7d9.css.map": "/seasons/static/css/main.3b02e7d9.css.map",
+    "main.91f29e9c.css.map": "/seasons/static/css/main.91f29e9c.css.map",
     "main.44770e02.js.map": "/seasons/static/js/main.44770e02.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b02e7d9.css",
+    "static/css/main.91f29e9c.css",
     "static/js/main.44770e02.js"
   ]
 }
