@@ -7,7 +7,7 @@ class ToDoList extends Component {
     super(props);
 
     this.state = {
-      taskList: [ ],
+      taskList: [ ], // is the local storage problem here?
     };
 
     this.addTask = this.addTask.bind(this);
@@ -19,7 +19,7 @@ class ToDoList extends Component {
     const storedTasks = localStorage.getItem("taskList");
 
     if (storedTasks) {
-      this.state.taskList = JSON.parse(storedTasks);
+      this.setState({ taskList: JSON.parse(storedTasks) });
     }
   };
 
@@ -51,6 +51,7 @@ class ToDoList extends Component {
       // find id of task
       if (task.id === id) {
         task.item = updatedTask;
+        return task;
       }
 
       return task;

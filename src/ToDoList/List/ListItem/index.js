@@ -34,7 +34,7 @@ const ListItem = (props) => {
 
       <span className="list-option-container">
         <span className="edit-task" onClick={() => setEditing(true)}><EditIcon /></span>
-        
+
         <span className="delete-task" onClick={deleteThis}><DeleteIcon /></span>
       </span>
     </div>
@@ -42,6 +42,8 @@ const ListItem = (props) => {
 
   const editingTemplate = (
     <form className="editing-template" onSubmit={saveEdit}>
+      <p>old task: {props.task.item}</p>
+
       <input id={props.task.id} className="editing-area" type="text" placeholder={props.task.item} value={editedTask} onChange={editThis} />
 
       <div className="et-btns">
