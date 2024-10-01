@@ -15,7 +15,7 @@ const ListItem = (props) => {
 
     const taskToEditId = props.task.id;
     props.editTask(taskToEditId, editedTask);
-    setEditedTask("");
+    setEditedTask(""); // what about if no changes are made? task should not be blank
     setEditing(false);
   }
 

@@ -49,7 +49,7 @@ class ToDoList extends Component {
     // find id of element
     const updatedTasks = this.state.taskList.map((task) => {
       // find id of task
-      if (task.id === id) {
+      if (task.id === id && updatedTask !== "") {
         task.item = updatedTask;
         return task;
       }
