@@ -5,6 +5,11 @@ import { ReactComponent as DeleteIcon } from '../../images/trash.svg';
 const ListItem = (props) => {
   const [editing, setEditing] = useState(false);
   const [editedTask, setEditedTask] = useState("");
+  const [checked, setChecked] = useState(false);
+
+  const checkThis = () => {
+    setChecked(!checked);
+  }
 
   const editThis = (e) => {
     setEditedTask(e.target.value);
@@ -26,7 +31,7 @@ const ListItem = (props) => {
 
   const viewTemplate = (
     <div className="list-item">
-      <input className="is-task-done" type="checkbox" />
+      <input className="is-task-done" type="checkbox" checked={checked} onClick={checkThis} />
 
       <span className="checkmark"></span>
 
@@ -50,7 +55,8 @@ const ListItem = (props) => {
         <button className="btn edit-cancel" type="button" onClick={() => setEditing(false)}>
           cancel
         </button>
-        <button className="btn edit-save" type="submit">
+        
+        <button className="btn edit-save" type="submit" onClick={() => checkThis}>
           save
         </button>
       </div>
