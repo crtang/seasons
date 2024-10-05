@@ -7,7 +7,7 @@ class ToDoList extends Component {
     super(props);
 
     this.state = {
-      taskList: [ ], // is the local storage problem here?
+      taskList: [ ],
     };
 
     this.addTask = this.addTask.bind(this);
@@ -61,8 +61,7 @@ class ToDoList extends Component {
   };
 
   deleteTask = (id) => {
-    // find id of element
-    // delete task
+    // find id of element and delete task
     const updatedTasks = this.state.taskList.filter((task) => task.id !== id);
     
     this.setState({ taskList: updatedTasks });

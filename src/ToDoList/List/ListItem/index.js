@@ -7,10 +7,6 @@ const ListItem = (props) => {
   const [editedTask, setEditedTask] = useState("");
   const [checked, setChecked] = useState(false);
 
-  const checkThis = () => {
-    setChecked(!checked);
-  }
-
   const editThis = (e) => {
     setEditedTask(e.target.value);
   };
@@ -24,6 +20,13 @@ const ListItem = (props) => {
     setEditing(false);
   }
 
+  const cancelThis = (e) => {
+    e.preventDefault();
+
+    setEditing(false);
+    setChecked(false);
+  }
+
   const deleteThis = () => {
     const taskToDeleteId = props.task.id;
     props.deleteTask(taskToDeleteId);
@@ -31,7 +34,7 @@ const ListItem = (props) => {
 
   const viewTemplate = (
     <div className="list-item">
-      <input className="is-task-done" type="checkbox" checked={checked} onClick={checkThis} />
+      <input className="is-task-done" type="checkbox" checked={checked} onClick={() => setChecked(!checked)} />
 
       <span className="checkmark"></span>
 
@@ -52,11 +55,11 @@ const ListItem = (props) => {
       <input id={props.task.id} className="editing-area" type="text" placeholder={props.task.item} value={editedTask} onChange={editThis} />
 
       <div className="et-btns">
-        <button className="btn edit-cancel" type="button" onClick={() => setEditing(false)}>
+        <button className="btn edit-cancel" type="button" onClick={cancelThis}>
           cancel
         </button>
         
-        <button className="btn edit-save" type="submit" onClick={() => checkThis}>
+        <button className="btn edit-save" type="submit">
           save
         </button>
       </div>
