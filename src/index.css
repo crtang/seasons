@@ -34,6 +34,7 @@ body {
   background-color: var(--color-4);
   font-family: "Gotham Light", sans-serif;
   font-size: 12px;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -66,6 +67,7 @@ article {
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-family: "Josefin Slab", serif;
+  font-weight: 700;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -334,6 +336,7 @@ svg path:hover {
 .cal-display {
   font-family: 'Josefin Slab', serif;
   font-size: 30px;
+  font-weight: normal;
   color: var(--color-1);
 }
 
@@ -492,6 +495,7 @@ svg path:hover {
 text.ct {
   font-family: 'Josefin Slab', serif;
   font-size: 12px;
+  font-weight: normal;
   fill: var(--color-3);
   stroke: none;
 }
