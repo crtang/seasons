@@ -40,7 +40,6 @@ class ClockAnalog extends Component {
 
     return (
       <article id="clock">
-        {/*} <ClockFace hourHand={this.state.hrPosition} minHand={this.state.minPosition} secHand={this.setState.secPosition} />*/}
         <svg id="svg-clock" width="200" height="200">
         <g id="clock-face">
           <circle id="clock-face" cx="100" cy="100" r="95" />

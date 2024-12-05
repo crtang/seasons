@@ -46,9 +46,7 @@ class ToDoList extends Component {
   };
 
   editTask = (id, updatedTask) => {
-    // find id of element
     const updatedTasks = this.state.taskList.map((task) => {
-      // find id of task
       if (task.id === id && updatedTask !== "") {
         task.item = updatedTask;
         return task;
@@ -61,7 +59,6 @@ class ToDoList extends Component {
   };
 
   deleteTask = (id) => {
-    // find id of element and delete task
     const updatedTasks = this.state.taskList.filter((task) => task.id !== id);
     
     this.setState({ taskList: updatedTasks });
