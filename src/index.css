@@ -18,6 +18,7 @@
 
 * {
   font-synthesis: none !important;
+  -webkit-text-stroke-width: 0 !important;
 }
 
 :root,
