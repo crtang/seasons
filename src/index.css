@@ -16,6 +16,10 @@
 }
 
 
+* {
+  font-synthesis: none !important;
+}
+
 :root,
   :root.spring {
     --color-1: #222222;
