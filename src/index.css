@@ -1,8 +1,20 @@
 @import 'normalize.css';
 
-@font-face {
+/*@font-face {
   font-family: 'Josefin Slab';
   src: url('fonts/JosefinSlab-VariableFont_wght.ttf');
+}*/
+
+@font-face {
+  font-family: 'Josefin Slab';
+  src: url('fonts/JosefinSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Josefin Slab Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: url('fonts/JosefinSlab-Bold.ttf');
 }
 
 @font-face {
@@ -16,10 +28,10 @@
 }
 
 
-* {
+/** {
   font-synthesis: none !important;
   -webkit-text-stroke-width: 0 !important;
-}
+}*/
 
 :root,
   :root.spring {
@@ -71,8 +83,7 @@ article {
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
-  font-family: "Josefin Slab", serif;
-  font-weight: 700;
+  font-family: "Josefin Slab Bold", serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
