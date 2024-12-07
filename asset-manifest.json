@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/seasons/static/css/main.3b590365.css",
+    "main.css": "/seasons/static/css/main.48c9e7a8.css",
     "main.js": "/seasons/static/js/main.c4a4508e.js",
     "static/media/GothamSSm-Medium.otf": "/seasons/static/media/GothamSSm-Medium.900495a1707caea44098.otf",
     "static/media/GothamSSm-Light.otf": "/seasons/static/media/GothamSSm-Light.363ec693f50a36bfefe8.otf",
-    "static/media/JosefinSlab-VariableFont_wght.ttf": "/seasons/static/media/JosefinSlab-VariableFont_wght.6a4e168263c2ebe1d56c.ttf",
+    "static/media/JosefinSlab-Regular.ttf": "/seasons/static/media/JosefinSlab-Regular.b13d67b2253f8a7289c3.ttf",
+    "static/media/JosefinSlab-Bold.ttf": "/seasons/static/media/JosefinSlab-Bold.a724d5f1ada77ac37660.ttf",
     "static/media/trash.svg": "/seasons/static/media/trash.cc99d9857331b4d4e0052b7ab9e664e2.svg",
     "static/media/edit.svg": "/seasons/static/media/edit.d51a722eedb17247a07d9b811fc53f27.svg",
     "index.html": "/seasons/index.html",
-    "main.3b590365.css.map": "/seasons/static/css/main.3b590365.css.map",
+    "main.48c9e7a8.css.map": "/seasons/static/css/main.48c9e7a8.css.map",
     "main.c4a4508e.js.map": "/seasons/static/js/main.c4a4508e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b590365.css",
+    "static/css/main.48c9e7a8.css",
     "static/js/main.c4a4508e.js"
   ]
 }
