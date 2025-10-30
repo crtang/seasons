@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ListHeader from './ListHeader';
 import List from './List';
 

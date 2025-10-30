@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import { Component } from 'react';
 
 class ClockAnalog extends Component {
   // store time as state
